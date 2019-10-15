@@ -2,16 +2,19 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <Home/>
+    <Question question="Intitulé de la question"/>
   </div>
 </template>
 
 <script>
 import Home from './components/Home.vue'
+import Question from './components/Question.vue'
 
 export default {
   name: 'app',
   components: {
-    Home
+    Home,
+    Question
   }
 }
 </script>

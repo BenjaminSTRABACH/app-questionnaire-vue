@@ -1,10 +1,6 @@
-
-
-
-
-
-
-
+Objectif :
+Créer les composants pour le formulaire d'accueil et pour les questions.
+Installer la BDD
 
 # app-questionnaire-vue
 

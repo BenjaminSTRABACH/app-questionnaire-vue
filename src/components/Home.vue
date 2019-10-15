@@ -1,11 +1,8 @@
 <template>
     <div>
-        <!-- Prenom
-        Nom
-        Nom de la société -->
         <h1>Bienvenue sur l'application</h1>
         <form novalidate class="md-layout" @submit.prevent="validateUser">
-            <md-card class="md-layout-item md-with-hover md-size-50 md-small-size-100">
+            <md-card class="md-layout-item md-size-50 md-small-size-100">
                 <md-card-header>
                     <div class="md-title">Connexion</div>
                 </md-card-header>
@@ -102,7 +99,7 @@
             this.$v.$reset()
             this.form.firstName = null
         },
-        saveUser () {
+        beginTest () {
             this.sending = true
 
             // Instead of this timeout, here you can call your API
@@ -112,12 +109,14 @@
                 this.sending = false
                 this.clearForm()
             }, 1500)
+
+            //Charger une autre vue
         },
         validateUser () {
             this.$v.$touch()
 
             if (!this.$v.$invalid) {
-                this.saveUser()
+                this.beginTest()
                 }
             }
         }
