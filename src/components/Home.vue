@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1>Bienvenue sur l'application</h1>
+        <!-- Formulaire du profil -->
         <form novalidate class="md-layout" @submit.prevent="validateUser">
             <md-card class="md-layout-item md-size-50 md-small-size-100">
                 <md-card-header>
@@ -8,6 +9,7 @@
                 </md-card-header>
                 <md-card-content>
                     <div class="md-layout md-gutter">
+                        <!-- Champ Prenom -->
                         <div class="md-layout-item md-small-size-100">
                             <md-field :class="getValidationClass('firstName')">
                                 <label for="first-name">Prénom</label>
@@ -16,37 +18,41 @@
                                 <span class="md-error" v-else-if="!$v.form.firstName.minlength">Champ invalide</span>
                             </md-field>
                         </div>
-                    </div>
 
-                    <div class="md-layout-item md-small-size-100">
-                        <md-field :class="getValidationClass('lastName')">
-                            <label for="last-name">Nom</label>
-                            <md-input name="last-name" id="last-name" autocomplete="family-name" v-model="form.lastName" :disabled="sending" />
-                            <span class="md-error" v-if="!$v.form.lastName.required">Le Nom est requis</span>
-                            <span class="md-error" v-else-if="!$v.form.lastName.minlength">Champ invalide</span>
-                        </md-field>
-                    </div>
+                        <!-- Champ Nom -->
+                        <div class="md-layout-item md-small-size-100">
+                            <md-field :class="getValidationClass('lastName')">
+                                <label for="last-name">Nom</label>
+                                <md-input name="last-name" id="last-name" autocomplete="family-name" v-model="form.lastName" :disabled="sending" />
+                                <span class="md-error" v-if="!$v.form.lastName.required">Le Nom est requis</span>
+                                <span class="md-error" v-else-if="!$v.form.lastName.minlength">Champ invalide</span>
+                            </md-field>
+                        </div>
 
-                    <div class="md-layout-item md-small-size-100">
-                        <md-field :class="getValidationClass('society')">
-                            <label for="society">Société</label>
-                            <md-input name="society" id="society" v-model="form.society" :disabled="sending" />
-                            <span class="md-error" v-if="!$v.form.society.required">Le nom de la société est requise</span>
-                            <span class="md-error" v-else-if="!$v.form.society.minlength">Champ invalide</span>
-                        </md-field>
+                        <!-- Champ Société -->
+                        <div class="md-layout-item md-small-size-100">
+                            <md-field :class="getValidationClass('society')">
+                                <label for="society">Société</label>
+                                <md-input name="society" id="society" v-model="form.society" :disabled="sending" />
+                                <span class="md-error" v-if="!$v.form.society.required">Le nom de la société est requise</span>
+                                <span class="md-error" v-else-if="!$v.form.society.minlength">Champ invalide</span>
+                            </md-field>
+                        </div>
                     </div>
                 </md-card-content>
 
-                <md-progress-bar md-mode="indeterminate" v-if="sending" />
-
+                <!-- Bouton de validation -->
                 <md-card-actions>
-                    <md-button type="submit" class="md-raised" :disabled="sending">Commencer le test</md-button>
+                    <router-link to="/question"><md-button type="submit" class="md-raised" :disabled="sending">Commencer le test</md-button></router-link>
                 </md-card-actions>
             </md-card>
         </form>
     </div>
 </template>
 
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+ 
 <script>
     import { validationMixin } from 'vuelidate'
     import {

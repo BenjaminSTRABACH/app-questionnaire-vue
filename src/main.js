@@ -8,6 +8,9 @@ import 'vue-material/dist/vue-material.css'
 Vue.config.productionTip = false
 Vue.use(VueMaterial)
 
+//var PouchDB = require('pouchdb');
+//var db = new PouchDB('vue_database');
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')

@@ -2,7 +2,6 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <Home/>
-    <Question question="Intitulé de la question"/>
   </div>
 </template>
 
@@ -13,8 +12,7 @@ import Question from './components/Question.vue'
 export default {
   name: 'app',
   components: {
-    Home,
-    Question
+    Home
   }
 }
 </script>
