@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <router-link to="/home"> Home </router-link>
-    <router-link to="/question"> Question </router-link>
     <router-view></router-view>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <Home/> -->
@@ -10,11 +8,15 @@
 
 <script>
 import Home from './components/Home.vue'
+import router from '@/router'
 
 export default {
   name: 'app',
   components: {
     Home
+  },
+  mounted:function(){
+    router.push('home')
   }
 }
 </script>
