@@ -1,13 +1,15 @@
 <template>
   <div id="app">
+    <router-link to="/home"> Home </router-link>
+    <router-link to="/question"> Question </router-link>
+    <router-view></router-view>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <Home/>
+    <!-- <Home/> -->
   </div>
 </template>
 
 <script>
 import Home from './components/Home.vue'
-import Question from './components/Question.vue'
 
 export default {
   name: 'app',

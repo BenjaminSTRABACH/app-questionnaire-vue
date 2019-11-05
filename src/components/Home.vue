@@ -43,22 +43,22 @@
 
                 <!-- Bouton de validation -->
                 <md-card-actions>
-                    <router-link to="/question"><md-button type="submit" class="md-raised" :disabled="sending">Commencer le test</md-button></router-link>
+                    <router-link to="/question">
+                        <md-button type="submit" class="md-raised" :disabled="sending">Commencer le test</md-button>
+                    </router-link>
                 </md-card-actions>
             </md-card>
         </form>
     </div>
 </template>
 
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
  
 <script>
     import { validationMixin } from 'vuelidate'
     import {
         required,
-        minLength,
-        maxLength
+        minLength
     } from 'vuelidate/lib/validators'
 
     export default {
@@ -120,9 +120,12 @@
         },
         validateUser () {
             this.$v.$touch()
+            
 
             if (!this.$v.$invalid) {
                 this.beginTest()
+                // router.push('question')
+                // router.replace('question')
                 }
             }
         }

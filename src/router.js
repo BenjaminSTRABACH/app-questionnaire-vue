@@ -1,13 +1,19 @@
-const Question = { template: '<div>question</div>' }
+import Vue from 'vue'
+import Router from 'vue-router'
+import Home from '@/components/Home.vue'
+import Question from '@/components/Question.vue'
 
-const routes = [
-    { path: '/question', component: Question }
-  ]
+Vue.use(Router)
 
-const router = new VueRouter({
-    routes 
-})
-
-const app = new Vue({
-    router
-  }).$mount('#app')
+export default new Router({
+  routes: [
+    {
+      path: '/home',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/question',
+      name: 'question',
+      component: Question
+    }]});
