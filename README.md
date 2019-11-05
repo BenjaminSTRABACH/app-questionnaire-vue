@@ -3,15 +3,22 @@
 ## 15/10/2019 :
 
 ### Objectif :
-Créer les composants pour le formulaire d'accueil et pour les questions.
+Créer les composants pour le formulaire d'accueil et pour les questions. <br>
 Installer la BDD
 ### Fin :
-BDD non-installée (non prioritaire)
+BDD non-installée (non prioritaire) <br>
 structures du formulaire crée et base des questions.
 ### Prochains objectifs : 
-Changement de vue après le formulaire d'accueil et entre les questions.
+Changement de vue après le formulaire d'accueil et entre les questions. <br>
 Génération des questions en fonction du JSON
 Enregistrement des réponses
+
+## 05/11/2019
+
+### Objectif : 
+Redirection vers les questions après le formulaire <br>
+Génération des questions.
+
 
 # app-questionnaire-vue
 
