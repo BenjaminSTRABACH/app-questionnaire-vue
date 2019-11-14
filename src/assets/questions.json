@@ -1,16 +1,67 @@
 {
-    "questions": [
+    "Questions": [
         {
-            "1": "Réponse 1",
-            "2": "Réponse 2",
-            "3": "Réponse 3"
+            "Id": "1",
+            "Libelle": "Intitulé de la question 1",
+            "Answers": [
+                {
+                    "Id": "1",
+                    "Libelle": "Réponse 1",
+                    "Valid": "false"
+                },
+                {
+                    "Id": "2",
+                    "Libelle": "Réponse 2",
+                    "Valid": "true"
+                },
+                {
+                    "Id": "3",
+                    "Libelle": "Réponse 3",
+                    "Valid": "false"
+                }
+            ]
+        },
+        {
+            "Id": "2",
+            "Libelle": "Intitulé de la question 2",
+            "Answers": [
+                {
+                    "Id": "1",
+                    "Libelle": "Réponse 1",
+                    "Valid": "false"
+                },
+                {
+                    "Id": "2",
+                    "Libelle": "Réponse 2",
+                    "Valid": "false"
+                },
+                {
+                    "Id": "3",
+                    "Libelle": "Réponse 3",
+                    "Valid": "true"
+                },
+                {
+                    "Id": "4",
+                    "Libelle": "Réponse 4",
+                    "Valid": "false"
+                }
+            ]
+        },
+        {
+            "Id": "3",
+            "Libelle": "Intitulé de la question 2",
+            "Answers": [
+                {
+                    "Id": "1",
+                    "Libelle": "Réponse 1",
+                    "Valid": "true"
+                },
+                {
+                    "Id": "2",
+                    "Libelle": "Réponse 2",
+                    "Valid": "false"
+                }
+            ]
         }
     ]
-
-
-
-
-
-
-
 }

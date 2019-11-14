@@ -2,19 +2,15 @@
   <div id="app">
     <router-view></router-view>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- <Home/> -->
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
+// import Home from './views/Home.vue'
 import router from '@/router'
 
 export default {
   name: 'app',
-  components: {
-    Home
-  },
   mounted:function(){
     router.push('home')
   }
